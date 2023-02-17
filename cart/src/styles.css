@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Moon+Dance&family=Noto+Sans:ital,wght@1,200&family=Rowdies&family=Titillium+Web:wght@300&display=swap');
+body{
+    font-family:'Titillium Web', sans-serif;;
+}
+
+.card-img-top
+{
+    width: 200px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.card-img-top:hover{
+    
+    transform:scale(1.25) ;
+ 
+    transition:0.5s
+}
+
+.navbar
+{
+     position: fixed;                  /* for sticky navbar */  
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.p3
+{
+    margin-top: 120px;
+}
+.p1
+{
+    margin-top: 120px;
+}
+.p2
+{
+    margin-top: 120px;
+}
+.p5
+{
+    margin-top: 130px;
+}

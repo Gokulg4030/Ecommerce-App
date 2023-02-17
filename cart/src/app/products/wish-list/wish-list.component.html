@@ -1,0 +1,45 @@
+
+<!-- empty wishlist-->
+<div class="p1">
+<div class="container border border-primary m-5 p-5" *ngIf="wishlist.length==0" >
+    <div class="row text-center">
+        <div class="col">
+            <img src="https://assets.materialup.com/uploads/87d4df96-a55f-4f4b-9a17-a696eded97f3/preview.gif" width="300px" alt="">
+            <h3 class="mt-3">Your Wishlist is Empty</h3>
+            <button routerLink="/" class="btn btn-primary mt-2"><i class="fa fa-cart-plus"></i></button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- wishlist with products-->
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of wishlist">
+                <div class="card h-100 align-item-center">
+                    <!-- Product image-->
+                    <img class="card-img-top align-items-center" [src]="product.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.title}}</h5>
+                            <!-- Product price-->
+                            ${{product.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                        <button class="btn btn-outline-danger mt-auto" (click)="deletewish(product)"><i class="fa fa-trash"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-outline-success mt-auto" (click)="addcart(product)" ><i class="fa fa-cart-plus"></i></button></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
